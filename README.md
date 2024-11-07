@@ -22,7 +22,7 @@ In response a simple one screen application with currency conversion widget was 
 
 Application was quickly bootstraped using Next.js for routing and rendering. Libraries "shadcn/ui" and "Tailwind" were used to quickly prototype an usable UI.
 
-Application uses Currency Beacon API to fetch list of currencies and convert between them. Currency Beacon API requires an active API key. This repository comes with an .env file with the API key provided. **This shouldn't be done in a real world project in a production environment.** Ideally the key would be masked behind a proxy API and the .env file would not be commited to the repository. If the key expires or hits requests limits please update the .env file with your own key before running the application.
+Application uses Currency Beacon API to fetch list of currencies and convert between them. Currency Beacon API requires an active API key. Ideally the key would be masked behind a proxy API.
 
 Few sample unit tests were created to test the functionalities of the "CurrencySelect" component. A sample E2E tests were written using Playwright to test core functionality of converting between two currencies. No more tests were created due to the limited time spent on the task and the simplicity of the app.
 
@@ -31,6 +31,10 @@ Few sample unit tests were created to test the functionalities of the "CurrencyS
 ### Prerequisites
 
 Nodejs and NPM is required to install dependencies, run the application and tests. LTS version is recommended.
+
+### Environment
+
+As mentioned previously Currency Beacon API requires and API key to use. Please create an `.env.local` file in the root directory of the project, copy the contents of `.env.example` file and fill the `NEXT_PUBLIC_CURRENCY_BEACON_API_KEY` env variable with your own Currency Beacon API key.
 
 ### Installing dependencies
 
